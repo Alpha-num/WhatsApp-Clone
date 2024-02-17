@@ -1,8 +1,8 @@
-<div class="min-h-full w-2/5">
+<div class="min-h-full w-2/5 overflow-y-auto">
     <header class="bg-gray-100 h-24">
         <div class="flex justify-between py-8 px-8">
-            <div class="bg-white rounded-full w-12 h-12 mb-7">
-                
+            <div class="bg-white rounded-full w-12 h-12 mb-7 overflow-hidden">
+                <img src="{{asset('images/harry.jpg')}}" class="object-cover h-full w-full" />
             </div>
             <div class="flex flex-1 justify-end gap-x-8 text-gray-700">
                 <span>
@@ -21,7 +21,7 @@
                 <svg viewBox="0 0 24 24" height="30" width="30" preserveAspectRatio="xMidYMid meet" class="" fill="none"><title>newsletter-outline</title><path fill-rule="evenodd" clip-rule="evenodd" d="M15.8301 8.63404C16.3081 8.35745 16.9198 8.52076 17.1964 8.9988C17.7077 9.88244 18 10.9086 18 12C18 13.0914 17.7077 14.1176 17.1964 15.0012C16.9198 15.4792 16.3081 15.6425 15.8301 15.366C15.352 15.0894 15.1887 14.4776 15.4653 13.9996C15.8052 13.4122 16 12.7304 16 12C16 11.2696 15.8052 10.5878 15.4653 10.0004C15.1887 9.52237 15.352 8.91063 15.8301 8.63404ZM8.16995 8.63404C8.64798 8.91063 8.81129 9.52237 8.5347 10.0004C8.19484 10.5878 8 11.2696 8 12C8 12.7304 8.19484 13.4122 8.5347 13.9996C8.81129 14.4776 8.64798 15.0894 8.16995 15.366C7.69191 15.6425 7.08017 15.4792 6.80358 15.0012C6.29231 14.1176 6 13.0914 6 12C6 10.9086 6.29231 9.88244 6.80358 8.9988C7.08017 8.52076 7.69191 8.35745 8.16995 8.63404Z" fill="currentColor"></path><path d="M13.5 12C13.5 12.8284 12.8284 13.5 12 13.5C11.1716 13.5 10.5 12.8284 10.5 12C10.5 11.1716 11.1716 10.5 12 10.5C12.8284 10.5 13.5 11.1716 13.5 12Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M5.33243 16.4826L5.09622 17.2728C4.86428 18.0487 4.62086 18.8707 4.41748 19.5825C5.12931 19.3791 5.95126 19.1357 6.72722 18.9038L7.51743 18.6676L8.24444 19.057C9.36447 19.6571 10.6412 20 12 20C16.4154 20 20 16.4154 20 12C20 7.58457 16.4154 4 12 4C7.58457 4 4 7.58457 4 12C4 13.3588 4.34295 14.6355 4.94296 15.7556L5.33243 16.4826ZM3.18 16.7C2.63 18.54 2 20.69 2 21C2 21.55 2.45 22 3 22C3.31 22 5.46 21.37 7.3 20.82C8.7 21.57 10.3 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 13.7 2.43 15.3 3.18 16.7Z" fill="currentColor"></path></svg>
                 </span>
                 <svg viewBox="0 0 24 24" height="30" width="30" preserveAspectRatio="xMidYMid meet" class="" fill="none"><title>new-chat-outline</title><path d="M9.53277 12.9911H11.5086V14.9671C11.5086 15.3999 11.7634 15.8175 12.1762 15.9488C12.8608 16.1661 13.4909 15.6613 13.4909 15.009V12.9911H15.4672C15.9005 12.9911 16.3181 12.7358 16.449 12.3226C16.6659 11.6381 16.1606 11.0089 15.5086 11.0089H13.4909V9.03332C13.4909 8.60007 13.2361 8.18252 12.8233 8.05119C12.1391 7.83391 11.5086 8.33872 11.5086 8.991V11.0089H9.49088C8.83941 11.0089 8.33411 11.6381 8.55097 12.3226C8.68144 12.7358 9.09947 12.9911 9.53277 12.9911Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M0.944298 5.52617L2.99998 8.84848V17.3333C2.99998 18.8061 4.19389 20 5.66665 20H19.3333C20.8061 20 22 18.8061 22 17.3333V6.66667C22 5.19391 20.8061 4 19.3333 4H1.79468C1.01126 4 0.532088 4.85997 0.944298 5.52617ZM4.99998 8.27977V17.3333C4.99998 17.7015 5.29845 18 5.66665 18H19.3333C19.7015 18 20 17.7015 20 17.3333V6.66667C20 6.29848 19.7015 6 19.3333 6H3.58937L4.99998 8.27977Z" fill="currentColor"></path></svg>
-                <span>
+                <span class="cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
                 </svg>
@@ -45,47 +45,29 @@
     </div>
     <hr>
 
-    <div class="p-3 flex justify-between bg-gray-200 mr-1 border-sm">
-        <div class="flex gap-x-4">
-            <div class="bg-white rounded-full w-16 h-16 border-green-500 border-2 mb-7">
-                        
-            </div>
-            <div class="flex flex-col pt-2">
-                <span class="text-lg font-medium text-gray-900">
-                    Rossy
-                </span>
-                <div class="text-gray-500 flex">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                  </span><span class="mx-2">Hi! there, how are you</span>
+    @foreach($users as $user)
+    <a href="#" wire:click.prevent="loadChatWindow({{$user->id}})" class="block">
+        <div class="p-3 flex justify-between mr-1 border-sm">
+            <div class="flex gap-x-4">
+                <div class="bg-white rounded-full w-16 h-16 border-green-500 border-2 mb-7 overflow-hidden">
+                    <img src="{{asset('images/img-13.jpg')}}" class="object-cover h-full w-full" />
+                </div>
+                <div class="flex flex-col pt-2">
+                    <span class="text-lg font-medium text-gray-900">
+                        {{ $user->name }}
+                    </span>
+                    <div class="text-gray-500 flex">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                            </svg>
+                        </span><span class="mx-2">Hi! there, how are you</span>
+                    </div>
                 </div>
             </div>
+            
+            <span class="text-gray-600">8:25PM</span>
         </div>
-        
-        <span class="text-gray-600">8:25PM</span>
-    </div>
-    <!-- Second component -->
-    <div class="p-3 flex justify-between mr-1 border-sm">
-        <div class="flex gap-x-4">
-            <div class="bg-white rounded-full w-16 h-16 border-green-500 border-2 mb-7">
-                        
-            </div>
-            <div class="flex flex-col pt-2">
-                <span class="text-lg font-medium text-gray-900">
-                    Matthew
-                </span>
-                <div class="text-gray-500 flex">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                    </svg>
-                  </span><span class="mx-2">How far, you dey house</span>
-                </div>
-            </div>
-        </div>
-        
-        <span class="text-gray-600">8:25PM</span>
-    </div>
+    </a>
+    @endforeach
 </div>
