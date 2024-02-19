@@ -4,7 +4,9 @@
     <header class="bg-gray-100 h-24 border-2 border-l-2">
         <div class="flex justify-between py-3 px-8">
         <div class="flex gap-x-4">
-            <div class="bg-white rounded-full w-16 h-16 border-green-500 border-2 mb-7"></div>
+            <div class="bg-white rounded-full w-16 h-16 border-green-500 border-2 mb-7 overflow-hidden">
+                <img src="{{asset('images/harry.jpg')}}" class="object-cover h-full w-full" />
+            </div>
             <div class="flex flex-col pt-2">
                 <span class="text-lg font-medium text-gray-900">
                     {{ optional($reciever)->name }}
@@ -30,11 +32,29 @@
         </div>
     </header>
     <div class="w-52 mt-3 text-center mx-auto p-3 bg-blue-200">
-        <span>FEBRUARY 20, 2024</span>
+        <span>{{ now()->format('F j, Y') }}</span>
     </div>
     <!-- chat widget -->
     <div class="h-auto w-full p-8">
-        {{$chats}}
+    @foreach($chats as $chat)
+        @if($chat->sender_id == $this->currentUserId)
+            <!-- Sender's message -->
+            <div class="flex justify-end mb-2 min-w-96">
+                <div class="text-gray-800 p-3 rounded-md" style="background-color: #d9fdd3;">
+                    <span>{{ $chat->message }}</span>
+
+                    <p class="text-end text-xs text-gray-500">{{$chat->created_at->format('g:iA')}}</p>
+                </div>
+            </div>
+        @else
+            <!-- Receiver's message -->
+            <div class="flex mb-2 justify-start">
+                <div class="text-black p-3 rounded-md">
+                    <span>{{ $reciever->name }} - {{ $chat->message }}</span>
+                </div>
+            </div>
+        @endif
+    @endforeach
 
     <!-- Additional messages go here -->
 

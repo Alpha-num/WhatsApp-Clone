@@ -19,10 +19,7 @@ class ChatList extends Component
     }
     
     public function mount(){
-        $this->currentUserId = session('user_id');
-        if(!$this->currentUserId){
-            $this->currentUserId = session()->get('user_id', uniqid('user_', true));
-        }
+        $this->currentUserId = 'testuser';
 
         $this->users = User::all();
         

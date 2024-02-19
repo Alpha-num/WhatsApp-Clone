@@ -45,6 +45,23 @@
     </div>
     <hr>
 
+    <div class="bg-amber-300 w-full flex gap-4 p-4" wire:offline.class.remove="hidden">
+        <span>
+            <svg viewBox="0 0 48 48" height="60" width="60" preserveAspectRatio="xMidYMid meet" class="text-white" version="1.1" x="0px" y="0px" enable-background="new 0 0 48 48"><title>alert-computer</title><path fill="currentColor" d="M24.154,2C11.919,2,2,11.924,2,24.165S11.919,46.33,24.154,46.33 s22.154-9.924,22.154-22.165S36.389,2,24.154,2z M23.985,34.138L12.976,19.459c3.028-2.294,6.881-3.67,11.009-3.67 c4.129,0,7.982,1.376,11.009,3.67L23.985,34.138z M23.04,28.488h1.981v-1.981H23.04V28.488z M23.04,24.526h1.981v-5.017H23.04 V24.526z"></path></svg>
+        </span>
+            <div>
+                <h2 class="text-xl">Computer not connected</h2>
+                <span class="my-5">Make sure your computer has an active Internet <br> connection</span>
+                <p class="flex"><span>Reconnect</span> <span class="mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+
+                </span></p>
+            </div>
+        
+    </div>
+
     @foreach($users as $user)
     <a href="#" wire:click.prevent="loadChatWindow({{$user->id}})" class="block">
         <div class="p-3 flex justify-between mr-1 border-sm">

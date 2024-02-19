@@ -41,7 +41,7 @@ class ChatWindow extends Component
         if($this->reciever){
             $reciever = $this->reciever;
             $chats = Message::where('sender_id', $this->currentUserId)
-            ->where('reciever_id', $this->selectedUserId)
+            ->where('reciever_id', $this->reciever->id)
             ->get();
         }else{
             $reciever = null;
